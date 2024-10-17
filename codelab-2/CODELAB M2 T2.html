@@ -1,0 +1,69 @@
+<html></html>
+<head>
+    <title>Penjumlahan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fffaad;
+        }
+        .container {
+            background-color: rgb(22, 92, 25);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align:left;
+            width: 300px;
+        }
+        h1 {
+            font-size: 15px;
+            margin-left: 20px;
+            color: #ffffff;
+        }
+        label {
+            display:contents;
+            margin: 10px 0 5px;
+            color: #ffffff;
+        }
+        input {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Pendaftaran</h1>
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" required>
+            <label>Nama:</label> 
+            <br><input type="text" name="fnama"><br>
+            <label>Email:</label> 
+            <br><input type="text" name="femail"><br>
+            <label>Alamat Lengkap:</label> 
+            <br><input type="text" name="falamat"><br>
+            <input type="submit" value="Submit">
+          </form>
+        <div>
+
+        </div>
+    <script>
+    function validateForm() {
+        var x = document.forms["myForm"]["fnama"]["femail"]["falamat"].value;
+         if (x == "") {
+         alert("Semua data harus diisi");
+         return false;
+         }
+}
+        
+    </script>
+</body>
+</html>
